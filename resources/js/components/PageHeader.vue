@@ -1,30 +1,49 @@
 <template>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
-        <a class="navbar-brand" ><h4 class="mx-2 my-2 text-white">iContact</h4></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <div>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
+        <!-- Nav bar  (header) -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
 
-                <li class="nav-item mx-3 mt-2">
-                    <router-link class="nav-link"  to="/home"> <h5>Home</h5> </router-link>
-                </li>
+            <a class="navbar-brand" ><h4 class="mx-2 my-2 text-white">iContact</h4></a>
 
-                <li class="nav-item mx-3 mt-2">
-                    <router-link class="nav-link"  to="/about"> <h5>About</h5> </router-link>
-                </li>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                <li class="nav-item mx-3 mt-2">
-                    <router-link class="nav-link"  to="/about"> <h5>Add New</h5> </router-link>
-                </li>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
 
+                    <li class="nav-item mx-3 mt-2">
+                        <router-link class="nav-link"  to="/home"> <h5>Home</h5> </router-link>
+                    </li>
 
-            </ul>
+                    <li class="nav-item mx-3 mt-2">
+                        <router-link class="nav-link"  to="/about"> <h5>About</h5> </router-link>
+                    </li>
 
-        </div>
-    </nav>
+                    <li class="nav-item mx-3 mt-2">
+                        <router-link class="nav-link"  data-toggle="modal" data-target="#meenachinmay" to="#"> <h5>Add New</h5> </router-link>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </nav>
+
+        <!-- Add New Contact model form -->
+        <AddContact/>
+
+    </div>
 
 </template>
+
+<script>
+    import AddContact from './AddContact'
+
+    export default {
+        components: {AddContact},
+    }
+
+</script>

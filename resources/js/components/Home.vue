@@ -55,7 +55,8 @@
 
                     </tbody>
                 </table>
-            </div>
+
+            </div> <!-- Col ended here! -->
 
         </div>
 

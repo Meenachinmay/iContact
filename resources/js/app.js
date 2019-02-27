@@ -14,6 +14,7 @@ const PageHeader = Vue.component('header', require('./components/PageHeader.vue'
 const Home = Vue.component('header', require('./components/Home.vue').default);
 const About= Vue.component('header', require('./components/About.vue').default);
 
+
 // routes management
 const routes = [
     { path: '/home', component: Home },
@@ -22,7 +23,7 @@ const routes = [
 
 // a new vue router instance
 const router = new VueRouter({
-    mode: 'history',
+    // mode: 'history',
     routes
 });
 

@@ -15,11 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/contacts', function () {
-    return view('contacts');
-});
+//Route::get('/contacts', function () {
+//    return view('contacts');
+//});
 
-//Route::get('/{name}', function () {
-//    return redirect('/');
-//})->where('name', '[A-Za-z]+');
+// contacts home page
+Route::get('/contacts', 'ContactsController@index')->name('contactsHomePage');
 
+// add new contact
+Route::post('/contacts/addNew', 'ContactsController@store')->name('addNewContact');
