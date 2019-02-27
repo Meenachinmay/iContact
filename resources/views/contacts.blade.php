@@ -16,6 +16,7 @@
     <div id="app">
 
         <page-header></page-header>
+        <router-view></router-view>
 
     </div>
     <script src="{{ asset('js/app.js') }}"></script>
