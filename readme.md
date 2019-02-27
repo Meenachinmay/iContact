@@ -1,4 +1,4 @@
-# iContact: Manage your contact list with live serach feature.
+# iContact: Manage your contact list with live search feature.
 
 ## This is an laravel and vuejs based application to manage contacts. there is live search feature available.
 
