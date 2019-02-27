@@ -23,7 +23,7 @@
                     </li>
 
                     <li class="nav-item mx-3 mt-2">
-                        <router-link class="nav-link"  data-toggle="modal" data-target="#meenachinmay" to="#"> <h5>Add New</h5> </router-link>
+                        <a class="btn btn-sm btn-link text-white nav-link" data-toggle="modal" data-target="#meenachinmay"> <h5>Add New</h5> </a>
                     </li>
 
                 </ul>

@@ -1811,10 +1811,10 @@ __webpack_require__.r(__webpack_exports__);
     addNewContact: function addNewContact() {
       axios.post('/contacts/addNew', this.$data.list).then(function (response) {
         console.log(response);
+        $('#meenachinmay').modal('hide');
       }).catch(function (error) {
         console.log(error);
       });
-      this.$data.list = '';
     }
   }
 });
@@ -37070,7 +37070,7 @@ var render = function() {
                 }
               ],
               staticClass: "form-control w-100",
-              attrs: { type: "text", required: "" },
+              attrs: { type: "text" },
               domProps: { value: _vm.list.name },
               on: {
                 input: function($event) {
@@ -37094,7 +37094,7 @@ var render = function() {
                 }
               ],
               staticClass: "form-control w-100",
-              attrs: { type: "email", required: "" },
+              attrs: { type: "email" },
               domProps: { value: _vm.list.email },
               on: {
                 input: function($event) {
@@ -37118,7 +37118,7 @@ var render = function() {
                 }
               ],
               staticClass: "form-control w-100",
-              attrs: { type: "text", required: "" },
+              attrs: { type: "text" },
               domProps: { value: _vm.list.phone_number },
               on: {
                 input: function($event) {
@@ -37145,7 +37145,7 @@ var render = function() {
               "button",
               {
                 staticClass: "btn btn-primary",
-                attrs: { type: "button", "data-dismiss": "modal" },
+                attrs: { type: "button" },
                 on: { click: _vm.addNewContact }
               },
               [_vm._v("Save contact")]
@@ -37387,25 +37387,7 @@ var render = function() {
                   1
                 ),
                 _vm._v(" "),
-                _c(
-                  "li",
-                  { staticClass: "nav-item mx-3 mt-2" },
-                  [
-                    _c(
-                      "router-link",
-                      {
-                        staticClass: "nav-link",
-                        attrs: {
-                          "data-toggle": "modal",
-                          "data-target": "#meenachinmay",
-                          to: "#"
-                        }
-                      },
-                      [_c("h5", [_vm._v("Add New")])]
-                    )
-                  ],
-                  1
-                )
+                _vm._m(2)
               ])
             ]
           )
@@ -37445,6 +37427,21 @@ var staticRenderFns = [
       },
       [_c("span", { staticClass: "navbar-toggler-icon" })]
     )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "nav-item mx-3 mt-2" }, [
+      _c(
+        "a",
+        {
+          staticClass: "btn btn-sm btn-link text-white nav-link",
+          attrs: { "data-toggle": "modal", "data-target": "#meenachinmay" }
+        },
+        [_c("h5", [_vm._v("Add New")])]
+      )
+    ])
   }
 ]
 render._withStripped = true
@@ -52201,9 +52198,9 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]);
-var PageHeader = vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('header', __webpack_require__(/*! ./components/PageHeader.vue */ "./resources/js/components/PageHeader.vue").default);
-var Home = vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('header', __webpack_require__(/*! ./components/Home.vue */ "./resources/js/components/Home.vue").default);
-var About = vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('header', __webpack_require__(/*! ./components/About.vue */ "./resources/js/components/About.vue").default); // routes management
+var PageHeader = vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('page-header', __webpack_require__(/*! ./components/PageHeader.vue */ "./resources/js/components/PageHeader.vue").default);
+var Home = vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('home', __webpack_require__(/*! ./components/Home.vue */ "./resources/js/components/Home.vue").default);
+var About = vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('about', __webpack_require__(/*! ./components/About.vue */ "./resources/js/components/About.vue").default); // routes management
 
 var routes = [{
   path: '/home',

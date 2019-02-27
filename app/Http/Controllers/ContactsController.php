@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Contact;
+use App\Http\Requests\AddContactRequest;
 use Illuminate\Http\Request;
 
 class ContactsController extends Controller
@@ -33,7 +34,7 @@ class ContactsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(AddContactRequest $request)
     {
         // save new contact in database here
         Contact::create([

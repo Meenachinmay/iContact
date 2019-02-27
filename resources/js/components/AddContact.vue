@@ -14,16 +14,16 @@
 
                 <div class="modal-body">
                     <label for="name">Name</label>
-                    <input type="text" class="form-control w-100" v-model="list.name" required>
+                    <input type="text" class="form-control w-100" v-model="list.name" >
                     <label for="name">Email</label>
-                    <input type="email" class="form-control w-100" v-model="list.email" required>
+                    <input type="email" class="form-control w-100" v-model="list.email" >
                     <label for="name">Phone No</label>
-                    <input type="text" class="form-control w-100" v-model="list.phone_number" required>
+                    <input type="text" class="form-control w-100" v-model="list.phone_number" >
                 </div>
 
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-primary" v-on:click="addNewContact" data-dismiss="modal">Save contact</button>
+                    <button type="button" class="btn btn-primary" v-on:click="addNewContact">Save contact</button>
                 </div>
 
             </div>
@@ -51,11 +51,11 @@
                 axios.post('/contacts/addNew', this.$data.list)
                     .then((response) => {
                         console.log(response)
+                        $('#meenachinmay').modal('hide')
                     })
                     .catch((error) => {
                         console.log(error)
-                    });
-                this.$data.list = ''
+                    })
             }
         }
     }

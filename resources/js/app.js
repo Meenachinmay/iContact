@@ -9,10 +9,10 @@ import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
 
-const PageHeader = Vue.component('header', require('./components/PageHeader.vue').default);
+const PageHeader = Vue.component('page-header', require('./components/PageHeader.vue').default);
 
-const Home = Vue.component('header', require('./components/Home.vue').default);
-const About= Vue.component('header', require('./components/About.vue').default);
+const Home = Vue.component('home', require('./components/Home.vue').default);
+const About= Vue.component('about', require('./components/About.vue').default);
 
 
 // routes management
