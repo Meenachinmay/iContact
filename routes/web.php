@@ -26,3 +26,7 @@ Route::get('/contacts', 'ContactsController@index')->name('contactsHomePage');
 Route::post('/contacts/addNew', 'ContactsController@store')->name('addNewContact');
 
 Route::post('/getContacts', 'ContactsController@getContacts')->name('getContacts');
+
+Route::delete('/deleteContact/{id}', 'ContactsController@destroy')->name('deleteContact');
+
+Route::patch('/updateContact/{id}', 'ContactsController@update')->name('updateContact');

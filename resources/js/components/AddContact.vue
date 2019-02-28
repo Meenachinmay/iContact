@@ -14,11 +14,11 @@
 
                 <div class="modal-body">
                     <label for="name">Name</label>
-                    <input type="text" class="form-control w-100" v-model="list.name" >
+                    <input type="text" class="form-control w-100 mb-2" v-model="list.name" >
                     <label for="name">Email</label>
-                    <input type="email" class="form-control w-100" v-model="list.email" >
+                    <input type="email" class="form-control w-100 mb-2" v-model="list.email" >
                     <label for="name">Phone No</label>
-                    <input type="text" class="form-control w-100" v-model="list.phone_number" >
+                    <input type="text" class="form-control w-100 mb-2" v-model="list.phone_number" >
                 </div>
 
                 <div class="modal-footer">

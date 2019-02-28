@@ -6,7 +6,7 @@
             <div class="modal-content">
 
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Contact details</h5>
+                    <h5 class="modal-title" id="exampleModalLongTitle">{{ this.data.name }}'s details</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -14,11 +14,11 @@
 
                 <div class="modal-body">
 
-                    <label for="name">Name</label>
+                    <label for="name"><strong>Name</strong></label>
                     <p class="form-control">{{ this.data.name }}</p>
-                    <label for="name">Email</label>
+                    <label for="name"><strong>Email</strong></label>
                     <p class="form-control">{{ this.data.email }}</p>
-                    <label for="name">Phone No</label>
+                    <label for="name"><strong>Phone No</strong></label>
                     <p class="form-control">{{ this.data.phone_number }}</p>
 
                 </div>

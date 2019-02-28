@@ -83,9 +83,15 @@ class ContactsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(AddContactRequest $request, $id)
     {
-        //
+        $contact = Contact::find($id);
+
+        $contact->name = $request->name;
+        $contact->email = $request->email;
+        $contact->phone_number = $request->phone_number;
+
+        $contact->save();
     }
 
     /**
@@ -96,6 +102,8 @@ class ContactsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $contact = Contact::find($id);
+
+        $contact->delete();
     }
 }

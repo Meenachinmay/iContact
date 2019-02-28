@@ -32,8 +32,13 @@
                         <td>{{ item.phone_number }}</td>
 
                         <td>
-                            <button class="btn btn-sm btn-primary">Edit</button> |
-                            <button class="btn btn-sm btn-danger">Delete</button> |
+                            <button
+                                    class="btn btn-sm btn-primary"
+                                    data-toggle="modal"
+                                    data-target="#updatecontact"
+                                    v-on:click="send_single_data(key)">Edit
+                            </button> |
+                            <button class="btn btn-sm btn-danger" v-on:click="delete_this_contact(key)">Delete</button> |
                             <button
                                     class="btn btn-sm btn-success"
                                     data-toggle="modal"
@@ -49,6 +54,7 @@
                 </table>
 
                 <ShowContact :data="single_list_data"/>
+                <UpdateContact :data="single_list_data"/>
 
             </div> <!-- Col ended here! -->
 
@@ -61,8 +67,10 @@
 <script>
 
     import ShowContact from './ShowContact.vue'
+    import UpdateContact from './UpdateContact'
+
     export default {
-        components: {ShowContact},
+        components: {ShowContact, UpdateContact},
 
         data(){
             return {
@@ -85,7 +93,12 @@
 
             send_single_data(key){
                 this.single_list_data = this.list_data[key];
-            }
+                window.eventBus.$emit('getData', this.single_list_data)
+            },
+
+            delete_this_contact(key){
+                axios.delete('/deleteContact/' + this.list_data[key].id)
+            },
         }
     }
 

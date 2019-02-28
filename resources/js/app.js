@@ -8,6 +8,7 @@ import VueRouter from 'vue-router';
 
 Vue.use(VueRouter);
 
+window.eventBus = new Vue({});
 
 const PageHeader = Vue.component('page-header', require('./components/PageHeader.vue').default);
 
