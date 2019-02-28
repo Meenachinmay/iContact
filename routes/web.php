@@ -24,3 +24,5 @@ Route::get('/contacts', 'ContactsController@index')->name('contactsHomePage');
 
 // add new contact
 Route::post('/contacts/addNew', 'ContactsController@store')->name('addNewContact');
+
+Route::post('/getContacts', 'ContactsController@getContacts')->name('getContacts');

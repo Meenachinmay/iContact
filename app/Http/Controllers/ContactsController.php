@@ -18,6 +18,14 @@ class ContactsController extends Controller
         return view('contacts');
     }
 
+
+    /**
+     * @return mixed
+     */
+    public function getContacts(){
+        return Contact::orderBy('name', 'desc')->get();
+    }
+
     /**
      * Show the form for creating a new resource.
      *
